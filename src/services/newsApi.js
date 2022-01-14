@@ -5,7 +5,10 @@ import { addIdToElement } from "../utils/utils";
 
 const getUrlAPi = (domain) => {
   const domainsParam = domain || DEFAULTS_DOMAINS;
-  const url = `http://${URL_NEWS_API}?sources=${domainsParam}&access_key=${API_KEY}`
+  const urlOld = `http://${URL_NEWS_API}?sources=${domainsParam}&access_key=${API_KEY}`;
+  console.log("urlOld", urlOld);
+  const url =
+    "https://newsdata.io/api/1/news?apikey=pub_36334c1ad7321169f1ef3868321229d477a6&q=news";
   return url;
 };
 
@@ -22,7 +25,7 @@ export const useDataApi = (domain) => {
 
     try {
       const result = await axios(apiUrl);
-      console.log('result', result);
+      console.log("result", result);
       const articlesResult = result?.data?.data;
       // add id to element in array
       setArticles(addIdToElement(articlesResult));
