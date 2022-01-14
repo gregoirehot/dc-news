@@ -63,6 +63,8 @@
     "@storybook/node-logger": "^6.4.12",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.12",
-    "react-test-renderer": "^17.0.2"
+    "mini-css-extract-plugin": "^2.5.0",
+    "react-test-renderer": "^17.0.2",
+    "webpack": "^5.66.0"
   }
 }

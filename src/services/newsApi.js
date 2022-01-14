@@ -23,7 +23,7 @@ export const useDataApi = (domain) => {
     try {
       const result = await axios(apiUrl);
       console.log("result", result);
-      const articlesResult = result?.data?.data;
+      const articlesResult = result?.data?.results;
       // add id to element in array
       setArticles(addIdToElement(articlesResult));
     } catch (error) {
