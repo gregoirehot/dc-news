@@ -18,7 +18,7 @@ function Timeline() {
           {articles
             ? articles.map((article, i) => (
                 <li key={i}>
-                  <a href={article.url}>{article.title}</a>
+                  <a href={article.link}>{article.title}</a>
                 </li>
               ))
             : ""}
