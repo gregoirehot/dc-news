@@ -1,14 +1,15 @@
 import React from "react";
+import Error from "../components/common/Error";
 import { useDataApi } from "../services/newsApi";
 
 function Timeline() {
-  const [{ articles, isLoading, isError }] = useDataApi();
+  const [{ articles, isLoading, error }] = useDataApi();
 
-  console.log('articles', articles);
+  console.log("articles", articles);
 
   return (
     <>
-      {isError && <div>TODO Error management ...</div>}
+      {error && <Error error={error} />}
 
       {isLoading ? (
         <div>Chargement ...</div>

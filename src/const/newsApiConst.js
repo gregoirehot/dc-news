@@ -1,3 +1,3 @@
-export const API_KEY = "80a8b863f1204a2aa9bc1218837366fc";
-export const URL_NEWS_API = "newsapi.org/v2/everything";
-export const DEFAULTS_DOMAINS = "techcrunch.com,thenextweb.com";
+export const API_KEY = "3911919c5ada3586f2807b62ae5a54f4";
+export const URL_NEWS_API = "api.mediastack.com/v1/news";
+export const DEFAULTS_DOMAINS = "cnn";

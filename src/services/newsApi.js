@@ -5,28 +5,29 @@ import { addIdToElement } from "../utils/utils";
 
 const getUrlAPi = (domain) => {
   const domainsParam = domain || DEFAULTS_DOMAINS;
-  const url = `https://${URL_NEWS_API}?domains=${domainsParam}&apiKey=${API_KEY}`;
+  const url = `http://${URL_NEWS_API}?sources=${domainsParam}&access_key=${API_KEY}`
   return url;
 };
 
 export const useDataApi = (domain) => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState(false);
 
   const apiUrl = getUrlAPi(domain);
 
   const fetchData = useCallback(async () => {
-    setIsError(false);
+    setError(null);
     setIsLoading(true);
 
     try {
       const result = await axios(apiUrl);
-      const articlesResult = result?.data?.articles;
+      console.log('result', result);
+      const articlesResult = result?.data?.data;
       // add id to element in array
       setArticles(addIdToElement(articlesResult));
     } catch (error) {
-      setIsError(true);
+      setError(JSON.stringify(error));
     }
 
     setIsLoading(false);
@@ -36,5 +37,5 @@ export const useDataApi = (domain) => {
     fetchData();
   }, [fetchData]);
 
-  return [{ articles, isLoading, isError }];
+  return [{ articles, isLoading, error }];
 };
