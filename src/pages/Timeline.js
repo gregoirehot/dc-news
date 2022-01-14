@@ -25,7 +25,7 @@ function Timeline() {
                   <a href={article?.link}>Source</a>
                 </li>
               ))
-            : ""}
+            : "Aucune actualités"}
         </ul>
       )}
     </>
