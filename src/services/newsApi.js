@@ -22,7 +22,6 @@ export const useDataApi = (domain) => {
 
     try {
       const result = await axios(apiUrl);
-      console.log("result", result);
       const articlesResult = result?.data?.results;
       // add id to element in array
       setArticles(addIdToElement(articlesResult));
@@ -38,4 +37,8 @@ export const useDataApi = (domain) => {
   }, [fetchData]);
 
   return [{ articles, isLoading, error }];
+};
+
+export const getArticle = (articles, idArticle) => {
+  return articles?.find((article) => article?.id === parseInt(idArticle));
 };

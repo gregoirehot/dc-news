@@ -2,10 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Error from "../components/common/Error";
 import Loading from "../components/common/Loading";
-import { useDataApi } from "../services/newsApi";
 
-function Timeline() {
-  const [{ articles, isLoading, error }] = useDataApi();
+function Timeline({ dataApiNews }) {
+  const [{ articles, isLoading, error }] = dataApiNews;
 
   console.log("articles", articles);
 
