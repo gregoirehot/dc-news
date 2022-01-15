@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Error from "../../components/common/Error";
 import Loading from "../../components/common/Loading";
+import Card from "./Card";
 import HeaderTimeline from "./HeaderTimeline";
 import PrimaryCard from "./PrimaryCard";
 
@@ -24,13 +24,7 @@ function Timeline({ dataApiNews }) {
                   {i === 0 ? (
                     <PrimaryCard article={article} />
                   ) : (
-                    <div>
-                      <Link to={`/news/${article?.id}`}>{article?.title}</Link>
-                      <br />
-                      <a href={article?.link}>
-                        {(article && article.source_id) || "Source"}
-                      </a>
-                    </div>
+                    <Card article={article} />
                   )}
                 </div>
               ))
