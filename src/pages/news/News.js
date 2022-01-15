@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Error from "../components/common/Error";
-import Loading from "../components/common/Loading";
-import { getArticle } from "../services/newsApi";
+import Error from "../../components/common/Error";
+import Loading from "../../components/common/Loading";
+import { getArticle } from "../../services/newsApi";
 
 function News({ dataApiNews }) {
   const { id } = useParams();
