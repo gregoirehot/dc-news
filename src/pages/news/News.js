@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Error from "../../components/common/Error";
 import Loading from "../../components/common/Loading";
 import { getArticle } from "../../services/newsApi";
+import Card from "../timeline/Card";
 
 function News({ dataApiNews }) {
   const { id } = useParams();
@@ -18,17 +19,7 @@ function News({ dataApiNews }) {
       {isLoading ? (
         <Loading />
       ) : (
-        <div>
-          {article ? (
-            <>
-              <div>{article?.title}</div>
-              <br />
-              <a href={article?.link}>Source</a>
-            </>
-          ) : (
-            "Aucune actualité"
-          )}
-        </div>
+        <div>{article ? <Card article={article} /> : "Aucune actualité"}</div>
       )}
     </>
   );
