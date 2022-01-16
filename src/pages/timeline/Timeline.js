@@ -8,8 +8,6 @@ import PrimaryCard from "./PrimaryCard";
 function Timeline({ dataApiNews }) {
   const [{ articles, isLoading, error }] = dataApiNews;
 
-  console.log("articles", articles);
-
   return (
     <>
       <HeaderTimeline />
@@ -24,7 +22,15 @@ function Timeline({ dataApiNews }) {
                   {i === 0 ? (
                     <PrimaryCard article={article} />
                   ) : (
-                    <Card article={article} />
+                    <Card
+                      id={article?.id}
+                      imageUrl={article?.image_url}
+                      title={article?.title}
+                      description={article?.description}
+                      link={article?.link}
+                      sourceId={article?.source_id}
+                      pubDate={article?.pubDate}
+                    />
                   )}
                 </div>
               ))

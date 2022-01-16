@@ -10,8 +10,6 @@ function News({ dataApiNews }) {
   const [{ articles, isLoading, error }] = dataApiNews;
   const article = getArticle(articles, id);
 
-  console.log("article", article);
-
   return (
     <>
       {error && <Error error={error} />}
@@ -19,7 +17,21 @@ function News({ dataApiNews }) {
       {isLoading ? (
         <Loading />
       ) : (
-        <div>{article ? <Card article={article} /> : "Aucune actualité"}</div>
+        <div>
+          {article ? (
+            <Card
+              id={article?.id}
+              imageUrl={article?.image_url}
+              title={article?.title}
+              fullDescription={article?.full_description}
+              link={article?.link}
+              sourceId={article?.source_id}
+              pubDate={article?.pubDate}
+            />
+          ) : (
+            "Aucune actualité"
+          )}
+        </div>
       )}
     </>
   );

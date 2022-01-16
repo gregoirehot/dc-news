@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { getDescription, getHoureSince } from "../../utils/utils";
 
 function PrimaryCard({ article }) {
   return (
@@ -17,15 +18,16 @@ function PrimaryCard({ article }) {
           <span className="card_content--title">{article?.title}</span>
         </Link>
         <span className="card_content--body">
-          {`${
-            article && article?.description
-              ? article?.description.slice(0, 220)
-              : ""
-          }...`}
+          {getDescription(article?.description)}
         </span>
-        <a href={article?.link} target="_blank" rel="noreferrer">
-          {(article && article.source_id) || "Source"}
-        </a>
+        <div className="flex_between_content">
+          <div>
+            <a href={article?.link} target="_blank" rel="noreferrer">
+              {article?.sourceId || "Source"}
+            </a>
+          </div>
+          <div>{getHoureSince(article?.pubDate)}</div>
+        </div>
       </div>
     </div>
   );

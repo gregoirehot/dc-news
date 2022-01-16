@@ -1,29 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { getDescription, getHoureSince } from "../../utils/utils";
 
-function Card({ article }) {
+function Card({
+  id,
+  imageUrl,
+  title,
+  description,
+  link,
+  sourceId,
+  fullDescription,
+  pubDate,
+}) {
   return (
     <div className="card side-image">
       <div className="card_img">
-        <img
-          src={article?.image_url || "https://via.placeholder.com/200"}
-          alt={article?.title}
-        />
+        <img src={imageUrl || "https://via.placeholder.com/200"} alt={title} />
       </div>
       <div className="card_content_side">
-        <Link to={`/news/${article?.id}`}>
-          <span className="card_content--title">{article?.title}</span>
+        <Link to={`/news/${id}`}>
+          <span className="card_content--title">{title}</span>
         </Link>
-        <span className="card_content--body">
-          {`${
-            article && article?.description
-              ? article?.description.slice(0, 220)
-              : ""
-          }...`}
-        </span>
-        <a href={article?.link} target="_blank" rel="noreferrer">
-          {(article && article.source_id) || "Source"}
-        </a>
+        <div className="card_content--body">
+          {fullDescription || getDescription(description)}
+        </div>
+        <div className="flex_between_content">
+          <div>
+            <a href={link} target="_blank" rel="noreferrer">
+              {sourceId || "Source"}
+            </a>
+          </div>
+          <div>{getHoureSince(pubDate)}</div>
+        </div>
       </div>
     </div>
   );
