@@ -1,10 +1,13 @@
 # Project DC-News
 
-It is a front-end app that displays the latest news, using the NewsData.Io(https://newsdata.io/) API. 
+It is a front-end app that displays the latest news, using the [NewsData.Io](https://newsdata.io/) API. 
 
-This app is available on https://dc-news.vercel.app/(https://dc-news.vercel.app/).
+This app is available on [https://dc-news.vercel.app/](https://dc-news.vercel.app/).
 
-There are two pages: the Timeline and the news detail page.
+There are two pages: 
+
+* the Timeline.
+* the news detail page.
 
 You can change the country of the articles with a filter.
 
@@ -60,15 +63,15 @@ npm run storybook
 
 ### Production
 
-Go into Vercel.com(https://vercel.com/)
+Go into [Vercel.com](https://vercel.com/)
 
 
 ## Built With  :construction:
 
 * [Newsdata.io](https://newsdata.io/) - News API.
 * [ReactJS](https://fr.reactjs.org/) - Javascript library used on the whole project.
-* [Axios]
-* [Moment]
+* Axios
+* Moment
 
 ## Authors  :thought_balloon:
 
