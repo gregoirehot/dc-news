@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Project DC-News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is a front-end app that displays the latest news, using the NewsData.Io(https://newsdata.io/) API. 
 
-## Available Scripts
+This app is available on https://dc-news.vercel.app/(https://dc-news.vercel.app/).
 
-In the project directory, you can run:
+There are two pages: the Timeline and the news detail page.
 
-### `npm start`
+You can change the country of the articles with a filter.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started  :baby_symbol:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Git](https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-Installation-de-Git) - Version control system 
+* [Node.js](https://nodejs.org/) - v10+ to run.
 
-### `npm run build`
+### Installing  :computer:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A step by step series of examples that tell you how to get a development env running
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Get the project by cloning the repository into your local environment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+git clone git@github.com:gregoirehot/dc-news.git
+```
 
-### `npm run eject`
+Checkout the main branch
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+git checkout main
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+npm install
+```
+The task install dependencies node modules.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run the project
 
-## Learn More
+```sh
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the tests  :passport_control:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm run test
+```
 
-### Code Splitting
+```sh
+npm run storybook
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment  :rocket:
 
-### Analyzing the Bundle Size
+### Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Go into Vercel.com(https://vercel.com/)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Built With  :construction:
 
-### Advanced Configuration
+* [Newsdata.io](https://newsdata.io/) - News API.
+* [ReactJS](https://fr.reactjs.org/) - Javascript library used on the whole project.
+* [Axios]
+* [Moment]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Authors  :thought_balloon:
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **Grégoire Hot** - *Developer* -
