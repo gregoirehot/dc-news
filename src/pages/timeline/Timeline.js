@@ -5,9 +5,7 @@ import Card from "./Card";
 import HeaderTimeline from "./HeaderTimeline";
 import PrimaryCard from "./PrimaryCard";
 
-function Timeline({ dataApiNews }) {
-  const [{ articles, isLoading, error }] = dataApiNews;
-
+function Timeline({ articles, isLoading, error }) {
   return (
     <>
       <HeaderTimeline />

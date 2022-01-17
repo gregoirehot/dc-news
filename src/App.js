@@ -7,20 +7,28 @@ import Timeline from "./pages/timeline/Timeline";
 import { useDataApi } from "./services/newsApi";
 
 function App() {
-  const dataApiNews = useDataApi();
+  const [{ articles, isLoading, error }, setCountry] = useDataApi();
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar setCountry={setCountry} />
       <div className="app-body">
         <Routes>
           <Route
             path={process.env.PUBLIC_URL + "/"}
-            element={<Timeline dataApiNews={dataApiNews} />}
+            element={
+              <Timeline
+                articles={articles}
+                isLoading={isLoading}
+                error={error}
+              />
+            }
           />
           <Route
             path={process.env.PUBLIC_URL + "/news/:id"}
-            element={<News dataApiNews={dataApiNews} />}
+            element={
+              <News articles={articles} isLoading={isLoading} error={error} />
+            }
           />
         </Routes>
       </div>

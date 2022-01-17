@@ -5,9 +5,8 @@ import Loading from "../../components/common/Loading";
 import { getArticle } from "../../services/newsApi";
 import Card from "../timeline/Card";
 
-function News({ dataApiNews }) {
+function News({ articles, isLoading, error }) {
   const { id } = useParams();
-  const [{ articles, isLoading, error }] = dataApiNews;
   const article = getArticle(articles, id);
 
   return (
