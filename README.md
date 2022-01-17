@@ -61,6 +61,12 @@ npm run storybook
 
 ## Deployment  :rocket:
 
+### Developement 
+
+```sh
+npm run build
+```
+
 ### Production
 
 Go into [Vercel.com](https://vercel.com/)
