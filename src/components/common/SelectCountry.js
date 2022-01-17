@@ -14,7 +14,7 @@ function SelectCountry({ setCountry }) {
 
   return (
     <select
-      class="form-select form-select-sm"
+      className="form-select form-select-sm"
       value={selectedOption}
       onChange={(e) => onChangeCountry(e.target.value)}
     >
