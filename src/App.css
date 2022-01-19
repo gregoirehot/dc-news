@@ -34,5 +34,8 @@
 }
 
 .app-body {
-  margin: 2rem 0.75rem 3rem 0.75rem;
+  margin: 2rem auto 3rem auto;
+  max-width: 73.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
