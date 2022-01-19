@@ -8,8 +8,8 @@ export const COUNTRIES = [
     value: "de",
   },
   {
-    label: "China",
-    value: "cn",
+    label: "Japan",
+    value: "jp",
   },
   {
     label: "Spain",
