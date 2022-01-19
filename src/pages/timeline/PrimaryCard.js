@@ -6,12 +6,10 @@ function PrimaryCard({ article }) {
   return (
     <div className="card">
       <div className="card_img">
-        <Link to={`/news/${article?.id}`}>
-          <img
-            src={article?.image_url || "https://via.placeholder.com/200"}
-            alt={article?.title}
-          />
-        </Link>
+        <img
+          src={article?.image_url || "https://via.placeholder.com/200"}
+          alt={article?.title}
+        />
       </div>
       <div className="card_content opaque">
         <Link to={`/news/${article?.id}`}>
