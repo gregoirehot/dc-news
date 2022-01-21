@@ -63,6 +63,23 @@
       hsl(200, 100%, 4.7%) 100%
     );
   }
+
+  @media screen and (max-width: 440px) {
+    .opaque {
+      background: none;
+      color: #000;
+      text-decoration: none;
+
+      .card_content--title {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    .card_content {
+      position: relative;
+    }
+  }
 }
 
 .side-image {
@@ -148,5 +165,5 @@
 }
 
 .form-select {
-    width: 10rem;
+  width: 10rem;
 }
