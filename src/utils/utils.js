@@ -2,7 +2,7 @@ import moment from "moment";
 import "moment/locale/fr";
 
 export const addIdToElement = (array) => {
-  array && array.forEach((element, i) => (element.id = i + 1));
+  array && array.map((element, i) => (element.id = i + 1));
   return array;
 };
 
