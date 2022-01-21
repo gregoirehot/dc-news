@@ -7,7 +7,7 @@ export const addIdToElement = (array) => {
 };
 
 export const getDescription = (description) => {
-  return `${description ? description.slice(0, 220) : ""}...`;
+  return `${description ? description.slice(0, 200) : ""}...`;
 };
 
 export const getHoureSince = (date) => {

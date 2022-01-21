@@ -21,7 +21,7 @@ function PrimaryCard({ article }) {
         <div className="flex_between_content">
           <div>
             <a href={article?.link} target="_blank" rel="noreferrer">
-              {article?.sourceId || "Source"}
+              {article?.source_id || "Source"}
             </a>
           </div>
           <div>{getHoureSince(article?.pubDate)}</div>
